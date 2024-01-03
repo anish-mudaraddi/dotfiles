@@ -1,0 +1,32 @@
+###############################################################################
+# Session Management
+###############################################################################
+
+## Session // Exit App // <><Shift> q ##
+set_from_resource  $i3-wm.binding.exit_app i3-wm.binding.exit_app Shift+q
+bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
+
+## Session // Refresh Session // <><Shift> r ##
+set_from_resource  $i3-wm.binding.refresh i3-wm.binding.refresh Shift+r
+set_from_resource  $i3-wm.program.refresh_ui i3-wm.program.refresh_ui /usr/bin/regolith-look refresh
+bindsym $mod+$i3-wm.binding.refresh exec --no-startup-id $i3-wm.program.refresh_ui
+
+## Session // Restart i3 // <><Ctrl> r ##
+set_from_resource  $i3-wm.binding.restart i3-wm.binding.restart Ctrl+r
+bindsym $mod+$i3-wm.binding.restart restart
+
+## Session // Logout // <><Shift> Delete ##
+set_from_resource  $i3-wm.binding.logout i3-wm.binding.logout Shift+Delete
+set_from_resource  $i3-wm.program.logout i3-wm.program.logout i3exit logout
+bindsym $mod+$i3-wm.binding.logout exec $i3-wm.program.logout
+
+## Session // Power Down // <><Ctrl> Delete ##
+set_from_resource  $i3-wm.binding.shutdown i3-wm.binding.shutdown Ctrl+Delete
+set_from_resource  $i3-wm.program.shutdown i3-wm.program.shutdown i3exit shutdown
+bindsym $mod+$i3-wm.binding.shutdown exec $i3-wm.program.shutdown
+
+## Session // Lock Screen // <> Delete ##
+set_from_resource  $i3-wm.binding.lock i3-wm.binding.lock Delete
+set_from_resource  $i3-wm.program.lock i3-wm.program.lock i3lock-fancy
+bindsym $mod+$i3-wm.binding.lock exec $i3-wm.program.lock
+

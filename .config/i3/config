@@ -1,0 +1,111 @@
+###############################################################################
+# Meta Key Mappings
+###############################################################################
+
+# Meta Key - Alt key is Mod1, and Windows key is Mod4
+set_from_resource $mod  i3-wm.mod Mod4
+set_from_resource $alt  i3-wm.alt Mod1
+
+###############################################################################
+# Workspace Names
+# These are the labels which define each i3 workspace.
+###############################################################################
+
+set_from_resource $ws1 i3-wm.workspace.01.name "1"
+set_from_resource $ws2  i3-wm.workspace.02.name "2"
+set_from_resource $ws3  i3-wm.workspace.03.name "3"
+set_from_resource $ws4  i3-wm.workspace.04.name "4"
+set_from_resource $ws5  i3-wm.workspace.05.name "5"
+set_from_resource $ws6  i3-wm.workspace.06.name "6"
+set_from_resource $ws7  i3-wm.workspace.07.name "7"
+set_from_resource $ws8  i3-wm.workspace.08.name "8"
+set_from_resource $ws9  i3-wm.workspace.09.name "9"
+set_from_resource $ws10 i3-wm.workspace.10.name "10"
+
+###############################################################################
+# Workspace Keys
+# These are the keys which will be used while binding workspace switching
+###############################################################################
+
+set_from_resource $ws1_key  i3-wm.workspace.01.key 1
+set_from_resource $ws2_key  i3-wm.workspace.02.key 2
+set_from_resource $ws3_key  i3-wm.workspace.03.key 3
+set_from_resource $ws4_key  i3-wm.workspace.04.key 4
+set_from_resource $ws5_key  i3-wm.workspace.05.key 5
+set_from_resource $ws6_key  i3-wm.workspace.06.key 6
+set_from_resource $ws7_key  i3-wm.workspace.07.key 7
+set_from_resource $ws8_key  i3-wm.workspace.08.key 8
+set_from_resource $ws9_key  i3-wm.workspace.09.key 9
+set_from_resource $ws10_key i3-wm.workspace.10.key 0
+
+###############################################################################
+# i3 Colors and Fonts
+###############################################################################
+
+# Create variables from Xresources for i3's look.
+set_from_resource  $focused.color.border i3-wm.client.focused.color.border "#6272A4"
+set_from_resource  $focused.color.background i3-wm.client.focused.color.background "#6272A4"
+set_from_resource  $focused.color.text i3-wm.client.focused.color.text "#F8F8F2"
+set_from_resource  $focused.color.indicator i3-wm.client.focused.color.indicator "#6272A4"
+set_from_resource  $focused.color.child_border i3-wm.client.focused.color.child_border "#6272A4"
+
+set_from_resource  $focused_inactive.color.border i3-wm.client.focused_inactive.color.border "#44475A"
+set_from_resource  $focused_inactive.color.background i3-wm.client.focused_inactive.color.background "#44475A"
+set_from_resource  $focused_inactive.color.text i3-wm.client.focused_inactive.color.text "#F8F8F2"
+set_from_resource  $focused_inactive.color.indicator i3-wm.client.focused_inactive.color.indicator "#44475A"
+set_from_resource  $focused_inactive.color.child_border i3-wm.client.focused_inactive.color.child_border "#44475A"
+
+set_from_resource  $unfocused.color.border i3-wm.client.unfocused.color.border "#282A36"
+set_from_resource  $unfocused.color.background i3-wm.client.unfocused.color.background "#282A36"
+set_from_resource  $unfocused.color.text i3-wm.client.unfocused.color.text "#BFBFBF"
+set_from_resource  $unfocused.color.indicator i3-wm.client.unfocused.color.indicator "#282A36"
+set_from_resource  $unfocused.color.child_border i3-wm.client.unfocused.color.child_border "#282A36"
+
+set_from_resource  $urgent.color.border i3-wm.client.urgent.color.border "#44475A"
+set_from_resource  $urgent.color.background i3-wm.client.urgent.color.background "#FF5555"
+set_from_resource  $urgent.color.text i3-wm.client.urgent.color.text "#F8F8F2"
+set_from_resource  $urgent.color.indicator i3-wm.client.urgent.color.indicator "#FF5555"
+set_from_resource  $urgent.color.child_border i3-wm.client.urgent.color.child_border "#FF5555"
+
+
+# Window Border color
+# class                 border                             background                         text                               indicator                          child_border
+client.focused          $focused.color.border              $focused.color.background          $focused.color.text                $focused.color.indicator           $focused.color.child_border
+client.focused_inactive $focused_inactive.color.border     $focused_inactive.color.background $focused_inactive.color.text       $focused_inactive.color.indicator  $focused_inactive.color.child_border
+client.unfocused        $unfocused.color.border            $unfocused.color.background        $unfocused.color.text              $unfocused.color.indicator         $unfocused.color.child_border
+client.urgent           $urgent.color.border               $urgent.color.background           $urgent.color.text                 $urgent.color.indicator            $urgent.color.child_border
+
+# Create variables from Xresources for i3bars's look.
+set_from_resource  $i3-wm.bar.background.color i3-wm.bar.background.color "#282A36"
+set_from_resource  $i3-wm.bar.statusline.color i3-wm.bar.statusline.color "#F8F8F2"
+set_from_resource  $i3-wm.bar.separator.color i3-wm.bar.separator.color "#44475A"
+
+set_from_resource  $i3-wm.bar.workspace.focused.border.color i3-wm.bar.workspace.focused.border.color "#44475A"
+set_from_resource  $i3-wm.bar.workspace.focused.background.color i3-wm.bar.workspace.focused.background.color "#44475A"
+set_from_resource  $i3-wm.bar.workspace.focused.text.color i3-wm.bar.workspace.focused.text.color "#F8F8F2"
+
+set_from_resource  $i3-wm.bar.workspace.active.border.color i3-wm.bar.workspace.active.border.color "#282A36"
+set_from_resource  $i3-wm.bar.workspace.active.background.color i3-wm.bar.workspace.active.background.color "#44475A"
+set_from_resource  $i3-wm.bar.workspace.active.text.color i3-wm.bar.workspace.active.text.color "#F8F8F2"
+
+set_from_resource  $i3-wm.bar.workspace.inactive.border.color i3-wm.bar.workspace.inactive.border.color "#282A36"
+set_from_resource  $i3-wm.bar.workspace.inactive.background.color i3-wm.bar.workspace.inactive.background.color "#282A36"
+set_from_resource  $i3-wm.bar.workspace.inactive.text.color i3-wm.bar.workspace.inactive.text.color "#BFBFBF"
+
+set_from_resource  $i3-wm.bar.workspace.urgent.border.color i3-wm.bar.workspace.urgent.border.color "#FF5555"
+set_from_resource  $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspace.urgent.background.color "#FF5555"
+set_from_resource  $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#F8F8F2"
+
+# Sets i3 font for dialogs
+set_from_resource  $i3-wm.font gtk.font_name Sans 13
+font pango:$i3-wm.font
+
+###############################################################################
+# i3 Config Partials
+###############################################################################
+
+# Include any i3 partials
+include $HOME/.config/i3/partials/*
+
+
+

@@ -1,0 +1,19 @@
+###############################################################################
+# System Management
+###############################################################################
+
+## Modify // Garauda Settings // <><Shift> n ##
+set_from_resource  $i3-wm.binding.settings i3-wm.binding.settings Shift+n
+set_from_resource  $i3-wm.program.settings i3-wm.program.settings garuda-assistant 
+bindsym $mod+$i3-wm.binding.settings exec --no-startup-id $i3-wm.program.settings
+
+## Modify // Bluetooth Settings // <><Shift> m ##
+set_from_resource  $i3-wm.binding.bluetooth i3-wm.binding.bluetooth Shift+m
+set_from_resource  $i3-wm.program.bluetooth i3-wm.program.bluetooth blueman-manager
+bindsym $mod+$i3-wm.binding.bluetooth exec --no-startup-id $i3-wm.program.bluetooth
+
+## Launch // File Browser // <><Shift> Enter ##
+set_from_resource  $i3-wm.binding.files i3-wm.binding.files Shift+Return
+set_from_resource  $i3-wm.program.files i3-wm.program.files /usr/bin/thunar --new-window
+bindsym $mod+$i3-wm.binding.files exec --no-startup-id $i3-wm.program.files
+

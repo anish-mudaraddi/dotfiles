@@ -1,0 +1,12 @@
+set_from_resource  $rofiTheme rofi.theme $HOME/.config/rofi/rofi.rasi
+
+## Launch // Application // <> D ##
+set_from_resource  $i3-wm.binding.launcher.app i3-wm.binding.launcher.app d
+set_from_resource  $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $rofiTheme
+bindsym $mod+$i3-wm.binding.launcher.app exec $i3-wm.program.launcher.app
+
+## Launch // Command // <><Shift> D ##
+set_from_resource  $i3-wm.binding.launcher.cmd i3-wm.binding.launcher.cmd Shift+d
+set_from_resource  $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -show run -theme $rofiTheme
+bindsym $mod+$i3-wm.binding.launcher.cmd exec $i3-wm.program.launcher.cmd
+
